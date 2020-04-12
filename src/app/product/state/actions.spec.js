@@ -3,7 +3,7 @@ import fetchMock from 'fetch-mock';
 
 //jest.useFakeTimers();
 
-import * as ActionTypes from "./ActionTypes";
+import * as ActionTypes from "./action-types";
 import * as actions from "./actions";
 
 // jest.mock("config", () => {

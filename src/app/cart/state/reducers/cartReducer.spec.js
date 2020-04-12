@@ -1,5 +1,5 @@
 import cartReducer from "./cartReducer";
-import * as ActionTypes from "../ActionTypes";
+import * as ActionTypes from "../action-types";
 
 
 describe ("Cart Reducer Default Tests", () => {

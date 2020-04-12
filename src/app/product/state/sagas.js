@@ -1,4 +1,4 @@
-import * as ActionTypes from "./ActionTypes";
+import * as ActionTypes from "./action-types";
 import * as service from "./service";
 import * as actions from "./actions";
 

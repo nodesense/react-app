@@ -24,7 +24,7 @@ export default class CartItem extends Component {
     }
 
     //if qty updated by other source
-    componentWillReceiveProps(props) {
+    UNSAFE_componentWillReceiveProps(props) {
         this.setState({
             qty: props.item.qty
         })

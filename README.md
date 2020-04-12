@@ -6,7 +6,7 @@ The code base is build from various workshops by Gopalakrishnan at NodeSense, th
 
 ## Get Started
 
-- Install Node.js 8.x LTS
+- Install Node.js 12.x LTS
 
 > git clone https://github.com/nodesense/react-app
 
@@ -16,8 +16,7 @@ The code base is build from various workshops by Gopalakrishnan at NodeSense, th
 
 > npm start
 
-The above command start the webpack dev server on default port 8080, if default port is not availble, it may start on 808x port number, check the console for more information.
-
+Open browser with port localhost:3000
 
 To build the production bundle, you can use below command
 

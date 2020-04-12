@@ -27,7 +27,7 @@ export default class CartSummary extends PureComponent {
     }
 
     // called when parent render is called on update cycle  
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         console.log("Cart Summary receive props");
         console.log("Current Props", this.props);
         console.log("Next props ", nextProps);

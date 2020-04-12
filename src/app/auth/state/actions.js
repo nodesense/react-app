@@ -1,5 +1,5 @@
 import * as authApi from './service';
-import * as ActionTypes from "./ActionTypes";
+import * as ActionTypes from "./action-types";
 
 const storage = window.localStorage;
 

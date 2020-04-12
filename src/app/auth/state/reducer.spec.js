@@ -1,5 +1,5 @@
 import authReducer from './reducer';
-import * as ActionTypes from './ActionTypes';
+import * as ActionTypes from './action-types';
 
 describe("auth Reducer test suite ", () => {
     it("should have auth reducer default state ", () => {

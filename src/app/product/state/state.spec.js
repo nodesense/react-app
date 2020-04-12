@@ -9,7 +9,7 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 import * as actions from './actions'
-import * as ActionTypes from './ActionTypes'
+import * as ActionTypes from './action-types'
 
 import fetchMock from 'fetch-mock';
 

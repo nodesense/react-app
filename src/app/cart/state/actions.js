@@ -1,4 +1,4 @@
-import * as ActionTypes from "./ActionTypes";
+import * as ActionTypes from "./action-types";
 
 //action creators are plain function, they create 
 //plain objects

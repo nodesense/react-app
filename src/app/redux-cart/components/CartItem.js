@@ -20,7 +20,7 @@ export default class CartItem extends Component {
         theme: PropTypes.string
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         this.setState({
             qty: nextProps.item.qty
         })

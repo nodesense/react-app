@@ -2,16 +2,18 @@ import {createStore,
     combineReducers, 
     applyMiddleware} from "redux";
 
+import { createLogger } from 'redux-logger'
 
 import thunk from "redux-thunk";
 import createSagaMiddleware from 'redux-saga'
-
 
 import productSaga from './product/state/sagas';
 
 import cartReducers from "./cart/state/reducers";
 import productReducer from "./product/state/reducer";
 import authReducer from "./auth/state/reducer";
+
+const logger = createLogger({});
 
 const sagaMiddleware = createSagaMiddleware()
 
@@ -23,13 +25,11 @@ let rootReducer = combineReducers({
 //
 })
 
- 
 function getInitialAuthState() {
     return {
         authenticated: window.localStorage.token ? true : false
     }
 }
- 
  
 function loggerMiddleware(store) {
     return function(next) {
@@ -45,11 +45,14 @@ function loggerMiddleware(store) {
 }
 
 
-let store = createStore(rootReducer, 
+const store = createStore(rootReducer, 
                     {
                         authState: getInitialAuthState()
                     },
-                    applyMiddleware(loggerMiddleware, thunk, sagaMiddleware));
+                    applyMiddleware(logger,
+                                    loggerMiddleware, 
+                                    thunk, 
+                                    sagaMiddleware));
 
 
 

@@ -1,5 +1,5 @@
 import reducer from "./reducer";
-import * as ActionTypes from "./ActionTypes";
+import * as ActionTypes from "./action-types";
 import * as actions from "./actions";
 
 describe ("Testing reducer", ()=> {
