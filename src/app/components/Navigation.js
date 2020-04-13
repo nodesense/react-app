@@ -61,8 +61,13 @@ export default function Navigation(props) {
                </NavLink>
                }
 
-                { props.authenticated &&
+               {/*
                 <button onClick={() => props.logout(props.history)} 
+                          >
+               */}
+
+                { props.authenticated &&
+                <button onClick={() => props.requestLogout(props.history)} 
                           >
                         Logout
                 </button>

@@ -22,7 +22,11 @@ export default class Login extends Component {
     const { username, password } = this.state;
     const { login } = this.props.actions;
     //FIXME: add the redirct after user logged in
+    // Thunk
     this.props.actions.login(username, password, this.props.history);
+
+    //saga
+    this.props.actions.requestLogin(username, password, this.props.history);
   }
 
   onChange(e) {

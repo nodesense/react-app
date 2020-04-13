@@ -1,6 +1,11 @@
 import * as ActionTypes from "./action-types";
 import * as service from "./service";
 
+
+export const requestProductsWithBrands = () => ({
+    type: ActionTypes.REQEUST_PRODUCTS_WITH_BRANDS
+});
+
 export function initProducts(products) {
     return {
         type: ActionTypes.INIT_PRODUCTS,

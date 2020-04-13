@@ -3,6 +3,20 @@ import * as ActionTypes from "./action-types";
 
 const storage = window.localStorage;
 
+export const loggedIn = () => ({type: ActionTypes.LOGGED_IN});
+export const loggedOut = () => ({type: ActionTypes.LOGGED_OUT});
+
+export const requestLogin = (username, password, history) => ({
+  type: ActionTypes.REQUEST_LOGIN,
+  payload: {user: {username, password} },
+  history
+})
+
+export const requestLogout = (history) => ({
+  type: ActionTypes.REQUEST_LOGOUT,
+  history
+});
+
 //thunk in es6
 export const login = (username, password, history) => {
   return function(dispatch) {
@@ -33,7 +47,6 @@ export const login = (username, password, history) => {
     });
   };
 };
-
 
 //thunk in es6
 export const logout = (history) => {

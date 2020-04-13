@@ -5,6 +5,13 @@ import axios from 'axios';
 
 import * as restful from "../../core/restful";
  
+
+export async function getAllProducts() {
+    return restful.fetchAPI(config.apiEndPoint + "/api/products")
+            .then (response => response.data);
+}
+
+
 export async function getProducts() {
     return restful.getJson(config.apiEndPoint + "/api/products")
 }

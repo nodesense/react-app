@@ -3,6 +3,16 @@
 //https://caniuse.com/#search=Fetch
 import "whatwg-fetch";
 
+import axios, { CancelToken } from 'axios';
+import { CANCEL } from 'redux-saga'
+
+export function fetchAPI(url) {
+  const source = CancelToken.source()
+  const request = axios.get(url, { cancelToken: source.token })
+  request[CANCEL] = () => source.cancel()
+  return request
+}
+
 //options helps to include method, headers and body element
 //refer https://github.com/github/fetch
 function fetchJson(url, options = undefined) {

@@ -91,7 +91,9 @@ export default class ProductSearch extends React.Component {
             <div ref="divContainer">
                 <h2>Search </h2>
 
-               <input ref="searchInput" onChange={this.searchProduct} name="searchInput" />
+               <input ref="searchInput" 
+                      onChange={this.searchProduct} 
+                      name="searchInput" />
 
                 <table>
                     <tbody>
@@ -100,8 +102,29 @@ export default class ProductSearch extends React.Component {
                         <th>Price</th> 
                         <th>Year</th> 
                     </tr>
+                {
+                    this.state.searchResults.map ( (product, index) => (
+                            <tr key={product.id} > 
+                                    <td>
+                                            
+                                            {product.name}  
+                                        
+                                    </td>
 
-                    {productsElements}
+                                    <td>
+                                        {product.price}
+                                    </td>
+
+
+                                    <td>
+                                        {product.year}
+                                    </td>
+                
+                                    
+                                </tr>
+                        ))
+                }
+
                     </tbody>
                 </table>
             </div>

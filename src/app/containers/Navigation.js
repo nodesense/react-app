@@ -3,7 +3,7 @@ import {bindActionCreators} from "redux";
 import {withRouter} from "react-router-dom";
 
 import Navigation from "../components/Navigation";
-import {logout} from "../auth/state/actions";
+import {logout, requestLogout} from "../auth/state/actions";
 
 const mapStateToProps = (state) => {
     console.log("NAV Map");
@@ -15,7 +15,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        logout: bindActionCreators(logout, dispatch)
+        logout: bindActionCreators(logout, dispatch),
+        requestLogout: bindActionCreators(requestLogout, dispatch),
     }
 }
 
@@ -25,6 +26,5 @@ const NavigationContainer =  connect(mapStateToProps,
 //wrap it over withRouter to get access to history api
 //this also helps whenever there is a change in routes navigation,
 //it helps to re-render navigation container
-
 
 export default withRouter(NavigationContainer);

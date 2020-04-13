@@ -15,12 +15,29 @@ export default class ProductList extends Component {
 
         // Using Saga
         this.props.actions.fetchProductsWithSaga();
+       // this.props.actions.fetchProductsWithSaga();
+
+        //Cancellable saga
+        this.props.actions.requestProductsWithBrands();
+
+        // setTimeout( () => {
+            
+        // }, 1000);
+
+    }
+
+    refresh = () => {
+        this.props.actions.requestProductsWithBrands();
     }
  
     render() {
         if (this.props.loading) {
             return (
-                <h2>Products loading ...</h2>
+                <div>
+                     <h2>Products loading ...</h2>
+                     
+                    <button onClick={this.refresh}>Refresh</button>
+                    </div>
             );
         }
 
@@ -31,6 +48,8 @@ export default class ProductList extends Component {
         }
 
         return (
+            <div>
+                <button onClick={this.refresh}>Refresh</button>
             <table>
                 <tbody>
                     <tr>
@@ -70,6 +89,7 @@ export default class ProductList extends Component {
                 }
             </tbody>
             </table>
+            </div>
         )
 
     }

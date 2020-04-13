@@ -6,6 +6,12 @@ import * as config from "../core/config";
 import * as restful from "../core/restful";
 
 
+
+export function getAllProducts() {
+    return restful.fetchAPI(config.apiEndPoint + "/api/products")
+            .then (response => response.data);
+}
+
 export function getProducts() {
     return restful.getJson(config.apiEndPoint + "/api/products")
 }

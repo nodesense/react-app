@@ -8,6 +8,7 @@ import thunk from "redux-thunk";
 import createSagaMiddleware from 'redux-saga'
 
 import productSaga from './product/state/sagas';
+import authSaga, {loginFlowSaga} from './auth/state/sagas';
 
 import cartReducers from "./cart/state/reducers";
 import productReducer from "./product/state/reducer";
@@ -56,6 +57,11 @@ const store = createStore(rootReducer,
 
 
 
+
+// TODO: rootSaga
+
 sagaMiddleware.run(productSaga)
+sagaMiddleware.run(authSaga)
+sagaMiddleware.run(loginFlowSaga)
 
 export default store;
