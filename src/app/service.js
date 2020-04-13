@@ -17,13 +17,13 @@ function fetchJson(url) {
                //best practice
                //check for response.status == 400, 403, 404, and show custom error
 
-               if (response.status == 400)
+               if (response.status === 400)
                throw new Error( "bad request, check token or token expired");
 
-               if (response.status == 404)
+               if (response.status === 404)
                 throw new Error("Resource not found");
 
-                if (response.status == 403)
+                if (response.status === 403)
                  throw new Error("Not permitted, auth needed");
 
                 //generic
@@ -34,7 +34,7 @@ function fetchJson(url) {
                 if (response.status >= 500)
                     throw new Error("Server error ");
 
-                if (response.status == 0)
+                if (response.status === 0)
                     throw new Error("Check network connection ");
 
               //since we can't know exact error
