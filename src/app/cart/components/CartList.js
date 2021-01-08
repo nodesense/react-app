@@ -25,7 +25,7 @@ export default class CartList extends Component {
     
     render() {
         console.log("CartList render");
-        
+    
         let {items} = this.props;
 
         return (

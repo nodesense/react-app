@@ -1,6 +1,6 @@
 
 import {connect} from "react-redux";
-//import { createSelector } from 'reselect'
+import { createSelector } from 'reselect'
 
 import CartSummary from "../components/CartSummary";
  
