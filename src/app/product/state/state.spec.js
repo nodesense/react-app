@@ -24,7 +24,7 @@ describe('async actions', () => {
 
   it('getproducts with store mock', () => {
     
-    fetchMock.get('http://localhost:7070/secured/api/products', [{id: 1},{id: 2}]);
+    fetchMock.get('http://localhost:7070/api/products', [{id: 1},{id: 2}]);
     
     const expectedActions = [
       actions.initError(false),

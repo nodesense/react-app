@@ -2,12 +2,19 @@
 import * as config from "../../core/config";
 
 import axios from 'axios';
-
+import axiosWrapper from "../../core/axios-wrapper";
 import * as restful from "../../core/restful";
  
 
 export async function getAllProducts() {
     return restful.fetchAPI(config.apiEndPoint + "/api/products")
+            .then (response => response.data);
+}
+
+
+
+export async function getAllProductsWithWrapper() {
+    return axiosWrapper.get("/api/products")
             .then (response => response.data);
 }
 

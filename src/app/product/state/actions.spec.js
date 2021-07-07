@@ -32,7 +32,7 @@ describe("testing get products", () => {
  
         // actual url
         // expected mock response
-        fetchMock.get('http://localhost:7070/secured/api/products', //mock request
+        fetchMock.get('http://localhost:7070/api/products', //mock request
                       [{id: 1},{id: 2}]); // mock response
 
         
