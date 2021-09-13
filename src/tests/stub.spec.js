@@ -3,7 +3,6 @@ describe("mock example test", () => {
 
     function calculator(calc, a, b) {
         const result = calc(a, b)
-         
         return result;
     }
 
