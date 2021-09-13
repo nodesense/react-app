@@ -16,6 +16,10 @@ The code base is build from various workshops by Gopalakrishnan at NodeSense, th
 
 > npm start
 
+
+>   npm run test -- --coverage .
+
+
 Open browser with port localhost:3000
 
 To build the production bundle, you can use below command
