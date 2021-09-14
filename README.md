@@ -6,7 +6,7 @@ The code base is build from various workshops by Gopalakrishnan at NodeSense, th
 
 ## Get Started
 
-- Install Node.js 12.x LTS
+- Install Node.js 14.x LTS
 
 > git clone https://github.com/nodesense/react-app
 
@@ -20,11 +20,42 @@ The code base is build from various workshops by Gopalakrishnan at NodeSense, th
 >   npm run test -- --coverage .
 
 
+
+
 Open browser with port localhost:3000
 
 To build the production bundle, you can use below command
 
 > npm run build
+
+
+## Debug The Test Cases using Jest and Visual Studio Code
+
+1. In VS Code Extension, install Jest extention. Reload needed for VS Code
+2. refer this article   https://morioh.com/p/272084f50134
+3. Create one launch.json file
+4. Patch  "console": "internalConsole",   "internalConsoleOptions": "openOnSessionStart",
+
+
+## Google API Login
+
+1. https://console.cloud.google.com/apis/dashboard
+2. OAuth consent Screen Screen [app name, support email, developer contact info]
+3. Add/Remove scope, ensure that you have email, profile and openid selected.
+4. Once all done with Oauth consent, go to Credentials page
+5. Add Credentials, select OAuth Client ID
+6. In Application Type, Select Web Application
+7. App name
+8. Authorized JavaScript origins, add http://localhost:3000 and one more http://localhost:8088
+9. Authorized redirect URIs, add http://localhost:3000 and one more http://localhost:8088
+10. Click on Create Button
+11. Google shall show Client id, make note and use the same for react-google-login plugin
+12. Now work with react login, use a plugin npm package react-google-login
+13. Install npm package  `npm install react-google-login`
+14. https://www.npmjs.com/package/react-google-login
+15. Adjust import statement, set the client id
+16. Refer Header.js
+
 
 
 ## Restful API Server
