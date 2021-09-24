@@ -20,9 +20,19 @@ describe('Calc component', () => {
   .props()
   .onClick({ target: { } });
 
-  component.incr() // calling funtion manually
+  wrapper.update()
+
+  // expect(component.incr).toHaveBeenCalled() // doesn't work, FIXME
+
+  expect(component.state.counter).toBe(1)
+
+
+  component.incr() // calling funtion manually, increenting twice
     //component, 'incr'
    
    expect(component.incr).toHaveBeenCalled()
+
+   wrapper.update()
+   expect(component.state.counter).toBe(2)
 });
 })
