@@ -12,7 +12,7 @@ describe('Calc component', () => {
     const wrapper = mount(<CalcButton />)
     const component = wrapper.instance()  
       const spy =  jest.spyOn(component, 'incr')
-   // expect(wrapper.find(Button).length).toBe(2);
+    expect(wrapper.find(Button).length).toBe(2);
 
    // click/simulate doesn't work for react material ui
    wrapper.find(Button)
