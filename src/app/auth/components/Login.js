@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
  
 export default class Login extends Component {
   constructor(props, context) {
-    super(props, context);
+    super(props);
 
     this.state = {
         username: '',

@@ -18,10 +18,12 @@ describe("About component Suite", ()=> {
 
         let component = wrapper.instance();
         
+        expect(component.state.members.length).toBe(2)
+
         component.addMember(); // 3rd item added to state
         // this trigger/calls render. 
         wrapper.update();
-
+        expect(component.state.members.length).toBe(3)
         expect(wrapper.find("ul").length).toBe(1);
         expect(wrapper.find("li").length).toBe(3);
     })

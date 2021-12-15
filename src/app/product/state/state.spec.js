@@ -36,7 +36,7 @@ describe('async actions', () => {
     const store = mockStore({ products: [] })
 
     return store
-          .dispatch(actions.fetchProducts())
+          .dispatch(actions.fetchProducts()) // dispatching func thunk
             .then(() => {
               // return of async actions
               expect(store.getActions()).toEqual(expectedActions)

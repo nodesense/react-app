@@ -7,7 +7,7 @@
 
 function calc(fn, a, b) {
      const result = fn(a, b)
-     
+      
     return result;
 }
 

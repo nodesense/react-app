@@ -11,6 +11,10 @@ exports[`renders correctly 1`] = `
     , 
     NodeSense
   </p>
+  <p>
+    My theme is 
+    blue
+  </p>
 </div>
 `;
 
@@ -24,6 +28,10 @@ exports[`renders correctly 2`] = `
     2019
     , 
     NodeSense
+  </p>
+  <p>
+    My theme is 
+    blue
   </p>
 </div>
 `;

@@ -14,6 +14,7 @@ import store from "./app/store";
 
 import "./index.css";
 
+
 console.log('env ', process.env.REACT_APP_MY_NAME);
 console.log('env ', process.env.DOMAIN);
 
