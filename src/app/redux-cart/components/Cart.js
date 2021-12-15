@@ -9,7 +9,7 @@ import CartSummary from "../containers/CartSummary";
 export default function Cart(props) { 
         return (
             <div> 
-            <h2>Cart</h2>
+            <h2>Cart - {props.total} items</h2>
 
             <button onClick={ ()=> props.addItem()}>
               Add
