@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import CartList from "./CartList";
 import CartSummary from "./CartSummary";
-
+    
 export default class Cart extends Component {
     constructor(props) {
         super(props);

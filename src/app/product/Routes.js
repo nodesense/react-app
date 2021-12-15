@@ -18,6 +18,9 @@ import ProductSearch
         from "./components/ProductSearch";
 
 import BrandList from "./containers/BrandList";
+import AuthRoute from "../auth/components/AuthRoute";
+
+ 
 
 export default function Routes(props) {
     return (
@@ -36,15 +39,15 @@ export default function Routes(props) {
                         
                 </Route>
                 
-                <Route path="/products/edit/:id" 
+                <AuthRoute path="/products/edit/:id" 
                        component={ProductEdit}>
                 
-                </Route>
+                </AuthRoute>
 
-                <Route path="/products/create" 
+                <AuthRoute path="/products/create" 
                        component={ProductEdit}>
                 
-                </Route>
+                </AuthRoute>
                 
                 <Route path="/products/search" 
                        component={ProductSearch}>

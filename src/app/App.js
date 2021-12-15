@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import Home from "./components/Home";
+import Theme from "./contexts/ThemeContext";
+
 
 //import About from "./components/About";
 //import Contact from "./components/Contact";
@@ -15,6 +17,10 @@ import Home from "./components/Home";
 export default class App extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            theme: 'red'
+        }
     }
     
     componentDidMount() {
@@ -41,13 +47,18 @@ export default class App extends Component {
     render() {
         return (
             <div> 
+            <Theme.Provider value={this.state.theme}>
+                <button className="success" onClick={() => this.setState({theme: 'green'})}>Green</button>
+                <button className="error" onClick={() => this.setState({theme: 'red'})}>Red</button>
+                
+                <Header></Header>
+
+                {/* router container.. */}
+                {this.props.children}
             
-            <Header></Header>
-
-            {this.props.children}
-
-            <Footer year={2020} company="React App"> </Footer>
-
+            
+                <Footer year={2020} company="React App"> </Footer>
+            </Theme.Provider>
             </div>
         )
     }

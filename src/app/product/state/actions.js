@@ -56,7 +56,7 @@ export function loading (status) {
     }
 }
 
-
+// action method, return action object
 export function initError(error) {
     return {
         type: ActionTypes.INIT_ERROR,
@@ -68,11 +68,17 @@ export function initError(error) {
 
 
 //thunk async functions
-
+// action method, but return a function instead of object
+// in redux-thunk, developers return a function as action
+// instead of object
+// redux-thunk middleware shall invoke that function, 
+// where async code can be written
 export function fetchProducts() {
+    // we return a function which is action function
+    // redux thunk shall call this function
     //thunk shall pass the dispatch
-    return function(dispatch, getState) {
-
+    return function(dispatch, getState, extraArgs) {
+        // async code here
         //no error
         dispatch(initError(false));
         dispatch(loading(true));
