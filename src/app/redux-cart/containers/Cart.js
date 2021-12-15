@@ -13,6 +13,16 @@ import * as actions from "../state/actions";
 //     }
 // }
 
+// state is input, passed by container
+// this function called first time when component created
+// whenever there is subscribe called inside container
+// container shall this method, this method to return props [for react] from state [redux]
+const mapStateToProps = (state) => {
+    return {
+        total: state.cart.items.length
+    }
+}
+
 // called only once per instance
 export const mapDispatchToProps = (dispatch) => {
     return {
@@ -39,5 +49,5 @@ export const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, 
+export default connect(mapStateToProps, 
                     mapDispatchToProps) (Cart)
