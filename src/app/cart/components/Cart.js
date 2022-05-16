@@ -10,6 +10,7 @@ export default class Cart extends Component {
     }
 
     addItem() {
+        console.log("**addItem called")
         let id = Math.ceil(Math.random() * 1000000);
         let item = {
             id: id,

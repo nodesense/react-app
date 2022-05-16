@@ -13,7 +13,7 @@ export default function Footer(props) {
         return (
             <div className="highlight"> 
             <hr />
-             <p>Copyrights@{props.year}, {props.company}</p>
+             <p>Copyrights @{props.year}, {props.company}</p>
 
              <Theme.Consumer>
                { value => (

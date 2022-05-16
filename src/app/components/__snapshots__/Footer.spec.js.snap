@@ -6,7 +6,7 @@ exports[`renders correctly 1`] = `
 >
   <hr />
   <p>
-    Copyrights@
+    Copyrights @
     2019
     , 
     NodeSense
@@ -24,7 +24,7 @@ exports[`renders correctly 2`] = `
 >
   <hr />
   <p>
-    Copyrights@
+    Copyrights @
     2019
     , 
     NodeSense
