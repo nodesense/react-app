@@ -1,3 +1,17 @@
+## TODO
+
+custom hook
+
+useCache("12345")
+  look at localStorage
+  // go and look from backend
+
+use hook to susbcribe
+  update teh state based on rxjs susbcrption 
+  useState
+
+const [count, publish] = useRxJSTotal() 
+
 ## Introduction
 
 This codebase contains a simple React Application with code samples, webpack development and production configuration, AJAX calls, React Router 4, Redux, Redux-Thunk, Jest based Test cases for Component, Reducers, Actions, Thunk, Store, JWT Authentication, Dynamic Component Loading, Code Splitting, RxJS & an example shopping cart implementation.
